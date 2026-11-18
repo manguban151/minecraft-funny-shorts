@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>minecraft-funny-shorts · Stage 1</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <main class="studio">
+      <section class="frame" aria-label="9:16 preview">
+        <canvas id="stage"></canvas>
+      </section>
+
+      <aside class="panel">
+        <header>
+          <h1>minecraft-funny-shorts</h1>
+          <p class="muted">Stage 1 · Three.js preview and benchmark</p>
+        </header>
+
+        <section>
+          <h2>Live stats</h2>
+          <dl class="stats">
+            <dt>FPS</dt><dd id="hud-fps">–</dd>
+            <dt>Frame interval</dt><dd id="hud-interval">–</dd>
+            <dt>Canvas</dt><dd id="hud-canvas">–</dd>
+            <dt>Draw load</dt><dd id="hud-draw">–</dd>
+            <dt>GPU</dt><dd id="hud-gpu">–</dd>
+            <dt>GPU vendor</dt><dd id="hud-vendor">–</dd>
+            <dt>WebGL</dt><dd id="hud-webgl">–</dd>
+            <dt>Limits</dt><dd id="hud-limits">–</dd>
+          </dl>
+          <p id="hud-warning" class="warning" hidden></p>
+        </section>
+
+        <section>
+          <h2>Controls</h2>
+          <label class="row">
+            <span>Preview resolution</span>
+            <select id="preview-res"></select>
+          </label>
+          <div class="buttons">
+            <button id="btn-pause" type="button">Pause preview</button>
+            <button id="btn-bench" type="button">Run benchmark</button>
+            <button id="btn-codec" type="button">Check WebCodecs</button>
+            <button id="btn-copy" type="button">Copy report</button>
+          </div>
+          <p id="status" class="muted" role="status">Ready.</p>
+        </section>
+
+        <section>
+          <h2>Report</h2>
+          <pre id="report">Run the benchmark or the WebCodecs check to see results here.</pre>
+        </section>
+      </aside>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
